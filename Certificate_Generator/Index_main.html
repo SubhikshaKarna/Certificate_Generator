@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Certificate Generator</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+
+    body {
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    /* CSS for header */
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #f5f5f5;
+    }
+
+    .header .logo {
+      font-size: 25px;
+      font-family: 'Sriracha', cursive;
+      color: #000;
+      text-decoration: none;
+      margin-left: 30px;
+    }
+
+    .nav-items {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      background-color: #f5f5f5;
+      margin-right: 20px;
+    }
+
+    .nav-items a {
+      text-decoration: none;
+      color: #000;
+      padding: 35px 20px;
+    }
+
+    .nav-items a.active {
+      font-weight: bold; 
+    }
+    
+   .nav-items a.About:hover {
+      font-weight: bold; 
+    }
+    .nav-items a.Login:hover {
+      font-weight: bold; 
+    }
+
+   
+    .intro {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 520px;
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%),
+        url("https://img.freepik.com/free-photo/graduation-diploma-certificate-with-ribbon-bow_23-2148769713.jpg?size=626&ext=jpg&ga=GA1.1.1355217875.1699182085&semt=ais");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .intro h1 {
+      font-family: sans-serif;
+      font-size: 60px;
+      color: #fff;
+      font-weight: bold;
+      text-transform: uppercase;
+      margin: 0;
+    }
+
+    .intro p {
+      font-size: 20px;
+      color: #d1d1d1;
+      text-transform: uppercase;
+      margin: 20px 0;
+    }
+
+    .intro button {
+      background-color: #5edaf0;
+      color: #000;
+      padding: 10px 25px;
+      border: none;
+      border-radius: 5px;
+      font-size: 20px;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.4)
+    }
+
+    .about {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 40px 80px;
+    }
+
+    .about .info {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 0 40px;
+    }
+
+    .about .info i {
+      width: fit-content;
+      font-size: 50px;
+      color: #333333;
+      border-radius: 50%;
+      border: 2px solid #333333;
+      padding: 12px;
+    }
+
+    .about .info .info-heading {
+      font-size: 20px;
+      color: #333333;
+      text-transform: uppercase;
+      margin: 10px 0;
+    }
+
+    .about .info .info-text {
+      font-size: 15px;
+      color: #585858;
+      margin: 10px 0;
+    }
+
+    .features {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 80px;
+      border-top: 2px solid #eeeeee;
+    }
+
+    .features img {
+      width: 500px;
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    .features-text h2 {
+      font-size: 30px;
+      color: #333333;
+      text-transform: uppercase;
+      margin: 0;
+    }
+
+    .features-text p {
+      font-size: 15px;
+      color: #585858;
+      margin: 10px 0;
+    }
+
+    
+    .footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: black;
+      padding: 40px 80px;
+    }
+
+    
+
+    .bottom-links {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 40px 0;
+    }
+
+    .bottom-links .links {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 0 40px;
+    }
+
+    .bottom-links .links span {
+      font-size: 20px;
+      color: #fff;
+      text-transform: uppercase;
+      margin: 10px 0;
+    }
+
+    .bottom-links .links a {
+      text-decoration: none;
+      color: #a1a1a1;
+      padding: 10px 20px;
+    }
+    
+  </style>
+</head>
+
+<body>
+  <header class="header">
+    <a href="#" class="logo">Certificate Generator</a>
+    <nav class="nav-items">
+      <a href="#" class="active">Home</a>
+      <a href="about.html" class="About">About</a>
+      <a href="logins.html" class="Login">Login</a>
+    </nav>
+  </header>
+  <main>
+    <div class="intro">
+      <h1>Create Beautiful Certificates</h1>
+      <p>Generate customized certificates effortlessly with our Certificate Generator.</p>
+      <a href="logins.html"><button>Get Started</button></a>
+    </div>
+    <div class="about">
+      <div class="info">
+        <i class="fas fa-certificate"></i>
+        <p class="info-heading">Easy to Use</p>
+        <p class="info-text">Our platform is user-friendly, allowing you to create certificates with ease.</p>
+      </div>
+      <div class="info">
+        <i class="fas fa-paint-brush"></i>
+        <p class="info-heading">Customizable</p>
+        <p class="info-text">Personalize your certificates with various design options to suit your needs.</p>
+      </div>
+      <div class="info">
+        <i class="fas fa-file-download"></i>
+        <p class="info-heading">Download Instantly</p>
+        <p class="info-text">Download your generated certificates instantly in high-quality formats.</p>
+      </div>
+    </div>
+    <div class="features">
+      <img src="https://img.freepik.com/free-vector/certification-concept-illustration_114360-7182.jpg?size=626&ext=jpg&ga=GA1.1.1355217875.1699182085&semt=ais">
+        <h2>Our Features</h2>
+        <p>Explore the features of our Certificate Generator that make it the perfect tool for your certificate needs.</p>
+      </div>
+    </div>
+  </main>
+  <footer class="footer">
+    
+  </footer>
+</body>
+
+</html>

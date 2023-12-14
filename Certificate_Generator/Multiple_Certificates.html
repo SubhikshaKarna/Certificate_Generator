@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+   
+    <style>
+        body {
+            font-family: 'Sriracha', cursive;
+            margin: 0;
+            box-sizing: border-box;
+            background-color: #f5f5f5; /* Updated background color to match home page */
+        }
+
+        .template-selection {
+            padding-left: 150px;
+            padding-right: 150px; 
+            display: flex;
+            gap: 60px;
+        }
+
+        .heading {
+            color: #000;
+        }
+
+        .template-selection img {
+            width: 340px;
+            height: 250px;
+            object-fit: cover;
+            border: 2px solid transparent;
+            cursor: pointer;
+        }
+
+        .template-selection img.selected {
+            border-color: #000;
+        }
+
+        #certificates-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            align-items: center;
+            background-color: #f5f5f5; /* Updated background color to match home page */
+        }
+
+        #downloadButton {
+            align-items: center;
+        }
+
+        .certificate {
+            width: 500px;
+            height: 350px;
+            background-size: cover;
+            background-position: center;
+            color: #000;
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+       
+
+        .custom-button {
+            text-align: center;
+            display: block;
+            margin: 0 auto;
+            cursor: pointer;
+            padding: 10px 20px;
+            background: black;
+            color: white;
+            border-radius: 70px;
+            width: 100px;
+        }
+
+        .custom-button:hover {
+            background: radial-gradient(rgb(43, 29, 4), white);
+            width: 120px;
+            transition: 0.5s;
+            color: white;
+        }
+
+        #nameInputs {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 20px;
+            border-radius: 100px;
+        }
+
+        #nameInputs input[type="number"] {
+            width: 300px;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+            border-radius: 100px;
+        }
+
+        #nameInputs button {
+            padding: 10px 20px;
+            border: none;
+            background-color: black; /* Updated background color to match home page */
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 100px;
+        }
+
+        #nameInputs button:hover {
+            background:  radial-gradient(rgb(43, 29, 4), white);
+            width: 160px;
+            transition: 0.4s;
+            color: white;
+        }
+
+        #generatedInputs {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 20px;
+            border-radius: 100p;
+        }
+
+        #generatedInputs input[type="text"] {
+            width: 300px;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+            border-radius: 100px;
+        }
+
+        #generatedInputs button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: black; /* Updated background color to match home page */
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 100px;
+        }
+
+        #buttonContainer button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: black; /* Updated background color to match home page */
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 100px;
+        }
+
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: black; /* Updated background color to match home page */
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 100px;
+        }
+
+        button:hover {
+            background:  radial-gradient(rgb(43, 29, 4), white);
+            width: 160px;
+            transition: 0.4s;
+            color: white;
+        }
+
+        #buttonContainer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+
+
+
+
+      
+        
+    </style>
+</head>
+
+<body>
+   
+    <div class="entire">
+    <div id="templateSelectionPage">
+        <h1 style="text-align: center;" class="heading">Select a Template</h1>
+        <input type="file" id="upload" accept="image/*" style="display: none;" onchange="handleTemplateUpload(event)">
+        <label for="upload" class="custom-button">Upload Image</label>
+        
+        
+         <br>
+        <div class="template-selection">
+            <img src="template1.jpg" onclick="selectTemplate('template1.jpg');proceedToNameInput();" class="selected">
+            <img src="template2.jpg" onclick="selectTemplate('template2.jpg');proceedToNameInput();">
+            <img src="template3.jpg" onclick="selectTemplate('template3.jpg');proceedToNameInput();">
+        </div>
+        <div class="template-selection">
+            <img src="template4.jpg" onclick="selectTemplate('template4.jpg');proceedToNameInput();">
+            <img src="template5.jpg" onclick="selectTemplate('template5.jpg');proceedToNameInput();">
+            <img src="template6.jpg" onclick="selectTemplate('template6.jpg');proceedToNameInput();">
+        </div>
+        <div class="template-selection">
+            <img src="template7.jpg" onclick="selectTemplate('template7.jpg');proceedToNameInput();">
+            <img src="template8.jpg" onclick="selectTemplate('template8.jpg');proceedToNameInput();">
+            <img src="template9.jpg" onclick="selectTemplate('template9.jpg');proceedToNameInput();">
+        </div>
+        
+    </div>
+    </div>
+    <div id="nameInputPage" style="display: none; text-align: center;">
+        <h1 style="text-align: center;" class="heading">Enter Names</h1>
+        <div id="nameInputs">
+            <input type="number" id="numNames" placeholder="Enter number of names">
+            <button onclick="createNameInputs()">Submit</button>
+        </div>
+        <div id="generatedInputs"></div>
+        <button type="button" onclick="generateCertificates()">Generate Certificates</button>
+    </div>
+
+    <div id="certificates-container" style="display: none;"></div>
+
+    <div id="buttonContainer" style="display: flex; justify-content: center; align-items: center;">
+        <button id="downloadButton" style="display: none;" onclick="downloadCertificates()">Download Certificates</button>
+    </div>
+
+
+
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <script>
+        let selectedTemplate = "";
+        let certificatesData = [];
+
+        function selectTemplate(template) {
+            selectedTemplate = template;
+            const images = document.querySelectorAll('.template-selection img');
+            images.forEach(img => img.classList.remove('selected'));
+            const selectedImg = document.querySelector(`.template-selection img[src="${template}"]`);
+            selectedImg.classList.add('selected');
+        }
+
+        function handleTemplateUpload(event) {
+            const file = event.target.files[0];
+            const reader = new FileReader();
+            reader.onload = function (e) {
+                const uploadedTemplate = e.target.result;
+                const templateImg = document.createElement('img');
+                templateImg.src = uploadedTemplate;
+                templateImg.onclick = function () {
+                    selectTemplate(uploadedTemplate);
+                    proceedToNameInput();
+                };
+                const templateSelectionDiv = document.querySelector('.template-selection');
+                templateSelectionDiv.insertBefore(templateImg, templateSelectionDiv.firstChild);
+            };
+            reader.readAsDataURL(file);
+        }
+
+        function proceedToNameInput() {
+            if (!selectedTemplate) {
+                alert('Please select a template for the certificates.');
+                return;
+            }
+
+            document.getElementById('templateSelectionPage').style.display = 'none';
+            document.getElementById('nameInputPage').style.display = 'block';
+        }
+
+        function createNameInputs() {
+            const numNames = document.getElementById('numNames').value;
+            const generatedInputs = document.getElementById('generatedInputs');
+            generatedInputs.innerHTML = '';
+
+            for (let i = 0; i < numNames; i++) {
+                const input = document.createElement('input');
+                input.type = 'text';
+                input.id = `name${i + 1}`;
+                input.placeholder = `Name ${i + 1}`;
+                generatedInputs.appendChild(input);
+                generatedInputs.appendChild(document.createElement('br'));
+                generatedInputs.appendChild(document.createElement('br'));
+            }
+        }
+
+        function generateCertificates() {
+            if (!selectedTemplate) {
+                alert('Please select a template for the certificates.');
+                return;
+            }
+
+            const numNames = document.getElementById('numNames').value;
+            const names = [];
+
+            for (let i = 0; i < numNames; i++) {
+                const name = document.getElementById(`name${i + 1}`).value.trim();
+                names.push(name);
+            }
+
+            certificatesData = names.map((name, index) => ({
+                id: `certificate-${index}`,
+                name: name
+            }));
+
+            const certificatesContainer = document.getElementById('certificates-container');
+            certificatesContainer.innerHTML = '';
+
+            certificatesData.forEach(certificate => {
+                const certificateDiv = document.createElement('div');
+                certificateDiv.id = certificate.id;
+                certificateDiv.classList.add('certificate');
+                certificateDiv.style.backgroundImage = `url(${selectedTemplate})`;
+                certificateDiv.innerText = certificate.name;
+                certificatesContainer.appendChild(certificateDiv);
+            });
+
+            document.getElementById('nameInputPage').style.display = 'none';
+            document.getElementById('certificates-container').style.display = 'flex';
+            document.getElementById('downloadButton').style.display = 'block';
+        }
+
+        function downloadCertificates() {
+            if (!certificatesData.length) {
+                alert('Please generate certificates first.');
+                return;
+            }
+
+            certificatesData.forEach(certificate => {
+                const element = document.getElementById(certificate.id);
+                html2canvas(element).then(function (canvas) {
+                    const link = document.createElement('a');
+                    document.body.appendChild(link);
+                    link.download = `${certificate.name}.png`;
+                    link.href = canvas.toDataURL('image/png');
+                    link.click();
+                    document.body.removeChild(link);
+                });
+            });
+        }
+    </script>
+</body>
+</html>
+
