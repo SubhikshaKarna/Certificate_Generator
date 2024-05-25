@@ -13,3 +13,16 @@ Visual Tour of Certificate Generator's Interface
 ![single](https://github.com/SubhikshaKarna/Certificate_Generator/assets/149041362/2d20df24-38f2-4621-8ef3-fd9f496a108f)
 
 ![many](https://github.com/SubhikshaKarna/Certificate_Generator/assets/149041362/e592f77c-eb8a-4724-92e0-324baefc78cc)
+
+## Used Technologies
+<!--tech stack icons-->
+<p>
+  <a href="https://skillicons.dev">
+    <img src="https://skillicons.dev/icons?i=css,html,js,vscode&perline=14" />
+    <img/>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg" width="47" height="47" 
+      style="height:47px;width:auto;border-radius:8rem;overflow: hidden"/>
+      
+    
+  </a>
+</p>
